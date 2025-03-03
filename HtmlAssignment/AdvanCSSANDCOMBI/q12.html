@@ -1,0 +1,32 @@
+<!-- Create a <div> element with the class highlight and ID special.
+    Write CSS rules for the <div> using an element selector, a class selector, and an ID selector, each with different colors.
+    Observe which color is displayed based on CSS specificity and explain why that color is shown. -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div{
+                /* specificity 0 */
+                color: red;
+            }
+            #div{
+
+                /*  specificity 100*/
+                color: rgb(2, 54, 36);
+                font-size: 45px;
+            }
+            .divi{
+                /* specificity 10 */
+                color: blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="divi" id="div">I am a coder</div>
+        
+    </body>
+    </html>

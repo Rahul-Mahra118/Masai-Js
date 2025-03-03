@@ -1,0 +1,32 @@
+<!-- Create a <div> element containing a <p> and another nested <section> that also includes a <p>.
+    Use a descendant combinator to style all <p> elements inside the <div> in blue text.
+    Use a child combinator to style only the <p> element that is a direct child of <div> with a bold font weight. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div p{
+            color: blue;
+        }
+        div>p{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <p>  I am inside Div</p>
+
+        <section>
+            <p> I am inside Section</p>
+        </section>
+    
+    
+</div>
+    
+</body>
+</html>

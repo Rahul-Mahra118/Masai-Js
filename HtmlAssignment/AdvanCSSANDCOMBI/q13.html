@@ -1,0 +1,38 @@
+<!-- Create an ordered list with at least five list items.
+Style the first list item in bold.
+Use an adjacent sibling combinator to apply a background color to the item directly following the first item.
+Apply a general sibling combinator to style all list items following the third item in italics.
+Use the :hover pseudo-class to apply a distinct color to list items when hovered.a -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ol li:first-child{
+            /* background-color: green; */
+            font-weight: bold;
+        }
+        ol li:first-child+li{
+             background-color: red;
+        }
+        ol li:nth-child(3)~li{
+            font-style: italic;
+
+        }
+        ol li:hover{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+        <li>item5</li>
+    </ol>
+</body>
+</html>
