@@ -1,0 +1,32 @@
+<!-- Create a webpage with three paragraphs and apply different styles to each paragraph using class selectors in CSS:
+
+Assign a class of highlight to the first paragraph and style it with a yellow background color and bold text.
+Assign a class of note to the second paragraph and style it with italic text and a font color of dark green.
+Leave the third paragraph without a class and apply a default style in CSS to make all paragraphs have a font size of 16px. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight{
+            font-weight: bold;
+            background-color: yellow;
+        }
+        .note{
+            color: darkcyan;
+            font-style: italic;
+        }
+        p{
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <p class="highlight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere laudantium, a quae cum quod minima aperiam. Totam odio temporibus provident.</p>
+    <p class="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ex id optio nostrum dolorum assumenda modi expedita explicabo! Voluptatum, natus.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, perspiciatis alias distinctio aliquid officiis fuga qui praesentium in neque exercitationem?</p>
+</body>
+</html>
