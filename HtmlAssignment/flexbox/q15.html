@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        .outercontainer{
+            border: 1px solid red;
+            width: 800px;
+            max-height: 100%;
+            background-color: rgb(212, 212, 192);
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+           
+        }
+        .box1{
+            border: 1px solid black;
+            height :auto;
+            padding: 10px;
+            width:100%;
+            display: flex;
+            justify-content: space-evenly;
+            gap: 10px;
+        }
+        .circle{
+            border-radius: 50%;
+            border: 1px solid red;
+            width: 200px;
+            height: 100px;
+        }
+        .firstcontainer{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            /* border: 5px solid pink; */
+            /* width: 50%; */
+            flex: 1;
+            min-width: 300px;
+        }
+      .secondcontainer{
+        border: 1px solid black;
+        width:50%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+      }
+      .boxes{
+        border: 2px solid red;
+        width: 100%;
+        height: 300px;
+        border-radius: 5px;
+      }
+    </style>
+    
+</head>
+<body style="border: 10px solid rgb(220, 15, 138); height: 100vh;display: flex; justify-content: center; align-items: center;">
+    <div class="outercontainer">
+       <div class="firstcontainer">
+        <div class="box1">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+          </div>
+          <div class="box1">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+          </div>
+          <div class="box1">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+          </div>
+         
+            <div class="box1">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+              </div>
+              <div class="box1">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+              </div>
+       </div>
+
+       <!-- second container -->
+        <div class="secondcontainer">
+   <div class="boxes"></div>
+   <div class="boxes"></div>
+   <div class="boxes"></div>
+   <div class="boxes"></div>
+        </div>
+    </div>
+
+</body>
+</html>

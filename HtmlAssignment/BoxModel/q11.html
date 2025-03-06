@@ -1,0 +1,23 @@
+<!-- Requirements:
+The webpage must contain three div elements styled as boxes.
+Each box should have:
+A unique background color.
+Different padding, border, and margin values.
+Use the box-sizing property on at least two of the boxes with different values (content-box and border-box).
+Add some text inside each box to visualize the content area.
+Expected Output: A webpage displaying three boxes with clear distinctions in their box model properties. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="width: 150px; height: 150px; background-color: aqua; border: 2px solid black; box-sizing: border-box; margin-bottom: 20px;padding: 20px;"> DIvision one</div>
+    <div style=" box-sizing:content-box;width: 150px; height: 150px;background-color: rgb(23, 76, 168); border: 2px solid black;margin-bottom: 20px; padding: 20px;">
+        Division two
+    </div>
+    <div style="width: 150px; height: 150px; background-color: red;border: 2px solid black;margin-bottom: 20px;padding: 40px;"> Divisioin Three</div>
+</body>
+</html>

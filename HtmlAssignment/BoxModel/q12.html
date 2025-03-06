@@ -1,0 +1,26 @@
+<!-- Requirements:
+Create four elements with unique IDs or classes (block-element, inline-element, inline-block-element, hidden-element).
+Style each element to display its respective property:
+block: Full-width, with a distinct border.
+inline: Inline text or an icon, styled with a colored background.
+inline-block: A small box with set dimensions and spacing.
+none: Should be invisible but toggleable via a button (JavaScript is optional for this step).
+Add a simple paragraph or text to observe the behavior of each display type.
+Expected Output: A webpage showing the differences between block, inline, and inline-block. Optionally toggle the visibility of the none element -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box1" style="border: 2px solid red;  height: 40px; margin-bottom: 20px;"> Block level</div>
+    <span id="box2" style="padding: 5px ; border: 2px solid yellow; background-color: pink; height: 4px;"> Inline element</span>
+    <div id="box3" style="display: inline-block; height: 4px; padding: 10px; margin-left: 20px;"> I am inline block</div>
+    <div id="box4" style="display: none; height: 100px;"></div>
+
+    
+</body>
+</html>

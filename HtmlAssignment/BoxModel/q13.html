@@ -1,0 +1,40 @@
+<!-- Requirements:
+The header should use position: sticky and stick to the top of the page after scrolling past it.
+The footer should use position: fixed and remain at the bottom of the viewport.
+The main content section should include at least 10 paragraphs to ensure scrolling behavior.
+Expected Output: A webpage where the header sticks to the top as you scroll and the footer remains fixed at the bottom -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            /* height: 10px; */
+            background-color: yellow;
+            height: 200px;
+        }
+    </style>
+</head>
+<body style="overflow: scroll;">
+    <header style="position: sticky; top:0; height: 100px; background-color: red;">
+        I am inside  Header section.
+    </header>
+    <main>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>10</p>
+    </main>
+    <footer style="position: fixed; bottom: 0; height: 100px; background-color: blueviolet; width: 100vw;">I am footer</footer>
+    
+</body>
+</html>
