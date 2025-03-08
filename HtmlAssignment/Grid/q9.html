@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        .container{
+            border: 1px solid black;
+            text-align: center;
+            background-color: aquamarine;
+            width: 800px;
+            height: 600px;
+            margin: auto;
+            display: grid;
+            grid-template-rows: 2;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px 1px;
+        }
+        div>div{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="background-color: rgb(185, 15, 227);"></div>
+        <div style="background-color: red;"></div>
+        <div style="background-color: green;"></div>
+        <div style="background-color: brown;"></div>
+        <div style="background-color: blue;"></div>
+        <div style="background-color: chocolate;"></div>
+    </div>
+    
+</body>
+</html>

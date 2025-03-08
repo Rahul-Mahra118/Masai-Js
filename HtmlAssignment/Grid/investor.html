@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        width: 100vw;
+        height: 100vh;
+    }
+    .main-container{
+        display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    /* height: 100vh; */
+    text-align: center;
+    }
+    .main-container>h1{
+        font-size: 2rem;
+        padding: 1rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-bottom: 1rem;
+    }
+    .brand{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+    .container{
+        height: 80%;
+        width: 80%;
+        /* background-color: black; */
+        text-align: center;
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 1rem;
+   
+        /* padding: 3rem; */
+    }
+    .items{
+        border: 2px solid gray;
+        border-radius: 1%;
+        background-color: white;
+        /* display: flex; */
+        
+    }
+    .founder-img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        padding: 2px;
+        border-radius: 5%;
+    }
+    .founder-name{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .details{
+        font-size: 0.8rem;
+        margin-top: 12px;
+
+    }
+    .details p{
+        /* margin-bottom: 0.5rem; */
+        color: gray;
+    }
+    .details img{
+        height: 8vh;
+        width: 8vw;
+    }
+</style>
+<body>
+    <div class="main-container">
+        <div class="brand">
+            <div>
+                <img src="https://www.masaischool.com/images/our-investors/india-q-borderless.svg" alt="">
+            </div>
+            <div>
+                <img src="https://www.masaischool.com/images/our-investors/capria-logo.svg" alt="">
+            </div>
+            <div>
+                <img src="https://www.masaischool.com/images/our-investors/omidyar-borderless.svg" alt="">
+            </div>
+        </div>
+        <h1>Strategic Investors</h1>
+        <div class="container">
+            
+            <div class="items">
+                <img class="founder-img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+                <div class="details">
+                     <h2 class="founder-name">Vijay Shekhar Sharma</h2>
+                    <p class="fouder-company">Founder of Paytm</p>
+                    <div>
+                        <img class="company-logo" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <img class="founder-img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+                <div class="details">
+                    <h2 class="founder-name">Vijay Shekhar Sharma</h2>
+                    <p class="fouder-company">Founder of Paytm</p>
+                    <div>
+                        <img class="company-logo" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <img class="founder-img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+                <div class="details">
+                     <h2 class="founder-name">Vijay Shekhar Sharma</h2>
+                    <p class="fouder-company">Founder of Paytm</p>
+                    <div>
+                        <img class="compnay-logo" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <img class="founder-img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+                <div class="details">
+                     <h2 class="founder-name">Vijay Shekhar Sharma</h2>
+                    <p class="fouder-company">Founder of Paytm</p>
+                    <div>
+                        <img class="company-logo" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <img class="founder-img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+                <div class="details">
+                     <h2 class="founder-name">Vijay Shekhar Sharma</h2>
+                    <p class="fouder-company">Founder of Paytm</p>
+                    <div>
+                        <img class="company-logo" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <img class="founder-img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+                <div class="details">
+                     <h2 class="founder-name">Vijay Shekhar Sharma</h2>
+                    <p class="fouder-company">Founder of Paytm</p>
+                    <div>
+                        <img class="company-logo" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <img class="founder-img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+                <div class="details">
+                     <h2 class="founder-name">Vijay Shekhar Sharma</h2>
+                    <p class="fouder-company">Founder of Paytm</p>
+                    <div>
+                        <img class="company-logo" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <img class="founder-img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+                <div class="details">
+                     <h2 class="founder-name">Vijay Shekhar Sharma</h2>
+                    <p class="fouder-company">Founder of Paytm</p>
+                    <div>
+                        <img class="company-logo" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <img class="founder-img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+                <div class="details">
+                     <h2 class="founder-name">Vijay Shekhar Sharma</h2>
+                    <p class="fouder-company">Founder of Paytm</p>
+                    <div>
+                        <img class="company-logo" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <img class="founder-img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+                <div class="details">
+                     <h2 class="founder-name">Vijay Shekhar Sharma</h2>
+                    <p class="fouder-company">Founder of Paytm</p>
+                    <div>
+                        <img class="company-logo" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <img class="founder-img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+                <div class="details">
+                     <h2 class="founder-name">Vijay Shekhar Sharma</h2>
+                    <p class="fouder-company">Founder of Paytm</p>
+                    <div>
+                        <img class="company-logo" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <img class="founder-img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+                <div class="details">
+                     <h2 class="founder-name">Vijay Shekhar Sharma</h2>
+                    <p class="fouder-company">Founder of Paytm</p>
+                    <div>
+                        <img class="company-logo" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <img class="founder-img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+                <div class="details">
+                     <h2 class="founder-name">Vijay Shekhar Sharma</h2>
+                    <p class="fouder-company">Founder of Paytm</p>
+                    <div>
+                        <img class="company-logo" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <img class="founder-img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+                <div class="details">
+                     <h2 class="founder-name">Vijay Shekhar Sharma</h2>
+                    <p class="fouder-company">Founder of Paytm</p>
+                    <div>
+                        <img class="company-logo" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <img class="founder-img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+                <div class="details">
+                     <h2 class="founder-name">Vijay Shekhar Sharma</h2>
+                    <p class="fouder-company">Founder of Paytm</p>
+                    <div>
+                        <img class="company-logo" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <img class="founder-img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+                <div class="details">
+                     <h2 class="founder-name">Vijay Shekhar Sharma</h2>
+                    <p class="fouder-company">Founder of Paytm</p>
+                    <div>
+                        <img class="company-logo" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <img class="founder-img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+                <div class="details">
+                     <h2 class="founder-name">Vijay Shekhar Sharma</h2>
+                    <p class="fouder-company">Founder of Paytm</p>
+                    <div>
+                        <img class="company-logo" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <img class="founder-img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+                <div class="details">
+                     <h2 class="founder-name">Vijay Shekhar Sharma</h2>
+                    <p class="fouder-company">Founder of Paytm</p>
+                    <div>
+                        <img class="company-logo" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <img class="founder-img" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+                <div class="details">
+                     <h2 class="founder-name">Vijay Shekhar Sharma</h2>
+                    <p class="fouder-company">Founder of Paytm</p>
+                    <div>
+                        <img class="company-logo" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

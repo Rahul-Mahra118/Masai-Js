@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box{
+        background-color: rgb(24, 20, 20);
+        width: 80%;
+        height: 50vh;
+        margin: auto;
+        text-align: center;
+        padding: 20px;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: repeat(5,1fr);
+        color: blue;
+
+    }
+    #box>div{
+        border: 2px solid rgb(151, 104, 104);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .enter {
+       grid-column: span 2;
+    }
+    
+    .shift{
+       grid-column: span 2;
+    }
+    .space{
+        grid-column: span 4;
+    }
+    div>div:hover{
+        background-color: beige;
+        color: red;
+        zoom: 0%;
+
+    }
+</style>
+<body>
+    <div id="box">
+        <div>~</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>0</div>
+        <div>del</div>
+        <div>tab</div>
+        <div>Q</div>
+        <div>W</div>
+        <div>E</div>
+        <div>R</div>
+        <div>T</div>
+        <div>Y</div>
+        <div>U</div>
+        <div>I</div>
+        <div>O</div>
+        <div>P</div>
+        <div>\</div>
+        <div>caps</div>
+        <div>A</div>
+        <div>S</div>
+        <div>D</div>
+        <div>F</div>
+        <div>G</div>
+        <div>H</div>
+        <div>J</div>
+        <div>K</div>
+        <div>L</div>
+        <div class="enter">Enter</div>
+        <div >shift</div>
+        <div>Z</div>
+        <div>X</div>
+        <div>C</div>
+        <div>V</div>
+        <div>B</div>
+        <div>N</div>
+        <div>M</div>
+        <div><</div>
+        <div>></div>
+        <div class="shift">shift</div>
+        <div>🌍</div>
+        <div>control</div>
+        <div>option</div>
+        <div>alt</div>
+        <div class="space">space</div>
+        <div>alt</div>
+        <div>option</div>
+        <div><-</div>
+        <div>-></div>
+        <!-- <div></div> -->
+    </div>
+</body>
+</html>
