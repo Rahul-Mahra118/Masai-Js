@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+      .outer {
+            padding: 30px;
+            background-color: lightcoral;
+        }
+        .middle {
+            padding: 30px;
+            background-color: lightblue;
+        }
+        .inner {
+            padding: 30px;
+            background-color: lightgreen;
+        }
+</style>
+<body>
+    <div class="outer">
+        Outer Div
+        <button class="outer-btn">Outer Button</button>
+        <div class="middle">
+            Middle Div
+            <button class="middle-btn">Middle Button</button>
+            <div class="inner">
+                Inner Div
+                <button class="inner-btn">Inner Button</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+     document.getElementById("container").addEventListener("click", (event) => {
+            let target = event.target;
+
+          
+            if (target.classList.contains("btn")) {
+                alert(target.getAttribute("data-name") + " Clicked!");
+            }
+
+            if (target.classList.contains("inner-btn")) {
+                event.stopPropagation();
+                alert("Propagation stopped at Inner Button!");
+            }
+        });
+</script>
