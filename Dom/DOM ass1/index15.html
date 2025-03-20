@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      .task-item {
+        display: flex;
+        justify-content: space-between;
+        width: 100px;
+        list-style-type: disc;
+      }
+    </style>
+  </head>
+  <body>
+    <input id="ipt" type="text" />
+    <button id="btn-task">Add Task</button>
+    <ul id="task-list"></ul>
+  </body>
+</html>
+<script>
+  let btn = document.getElementById("btn-task");
+  let ul = document.querySelector("#task-list");
+  ul.style.listStyleType = "none";
+  btn.addEventListener("click", () => {
+    let input = document.querySelector("#ipt");
+    let value = input.value;
+    if (value != "") {
+      let li = document.createElement("li");
+
+      li.classList.add("task-item");
+      li.innerText = value;
+      //complete icon
+      let checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      li.appendChild(checkbox);
+      checkbox.addEventListener("change", () => {
+        if (checkbox.checked) {
+          li.style.textDecoration = "line-through";
+        } else {
+          li.style.textDecoration = "none";
+        }
+      });
+
+      //delete button
+      let deleteicon = document.createElement("i");
+      deleteicon.classList.add("fas", "fa-trash", "delete-icon");
+      li.appendChild(deleteicon);
+      ul.appendChild(li);
+      input.value = "";
+    } else {
+      alert("Input the task");
+    }
+  });
+  //   event delegation
+  ul.addEventListener("click", (e) => {
+    if (e.target.classList.contains("delete-icon")) {
+      e.target.closest("li").remove();
+    }
+  });
+</script>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="">Enter color</label>
+    <input type="text" id="firstinput" />
+    <br />
+    <label for="">Enter text</label>
+    <input type="text" id="secondIp" />
+    <div
+      style="
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        text-align: center;
+        margin-bottom: 10px;
+      "
+      id="div1"
+    >
+      hey bro
+    </div>
+    <button id="cgbtn">Change Background</button>
+    <div
+      style="
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        text-align: center;
+        margin-bottom: 10px;
+      "
+      id="div2"
+    >
+      Initial content
+    </div>
+    <button id="ut">update Text</button>
+  </body>
+</html>
+<script>
+  let cgbtn = document.getElementById("cgbtn");
+  cgbtn.addEventListener("click", () => {
+    let firstinput = document.getElementById("firstinput").value;
+
+    let div1 = document.getElementById("div1");
+    div1.style.backgroundColor = firstinput;
+  });
+  //target second btn
+  let ut = document.getElementById("ut");
+
+  ut.addEventListener("click", () => {
+    //input value taken
+    let secondIp = document.getElementById("secondIp").value;
+
+    if (secondIp != "") {
+      let div2 = document.getElementById("div2");
+      div2.innerText = secondIp;
+    } else {
+      alert("Enter the valid input");
+    }
+  });
+</script>

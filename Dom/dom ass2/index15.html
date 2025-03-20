@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #header{
+            background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #header>button{
+            background: linear-gradient(to bottom left, #000000 0%, #000000 75%);
+            padding: 8px;
+            color:rgb(230, 187, 16);
+            font-size: 1em;
+            border-radius: 0.4em;
+            margin: 0px 10px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+   />
+  </head>
+  <body>
+    <header id="header">
+      <button id="all-task"> All Task</button>
+      <button id="completed-task">Completed Task</button>
+      <button id="incomplete-task">Incomplete Task</button>
+    </header>
+    <main>
+      <input id="input"  type="text">
+      <button id="add-task">Add Task</button>
+      <ul id="ulList"></ul>
+      <button id="sort-btn">Sort Alphabetically</button>
+      <!-- task counts -->
+      <p>Total: <span id="total-count">0</span></p>
+      <p>Completed: <span id="completed-count">0</span></p>
+      <p>Incomplete: <span id="incomplete-count">0</span></p>
+    </main>
+  </body>
+</html>
+<script>
+   
+   const addbutton= document.getElementById('add-task');
+   const taskInput= document.getElementById('input');
+   const taskList= document.getElementById('ulList');
+   const totalCount = document.getElementById("all-task");
+    const completedCount = document.getElementById("completed-task");
+    const incompleteCount = document.getElementById("incomplete-task");
+
+   let allTask=[];
+
+   addbutton.addEventListener('click',()=>{
+    const taskName=taskInput.value.trim();
+    if(taskName){
+      allTask.push({name:taskName,completed:false});
+      taskInput.value=''  //clear the input field
+    }
+   })
+
+  
+ 
+
+
+</script>
