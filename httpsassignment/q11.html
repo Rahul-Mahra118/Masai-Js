@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>User List</h2>
+    <ul id="userlist"></ul>
+  </body>
+</html>
+<script>
+  function fetchUserData() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => response.json())
+      .then((data) =>
+      {
+        const userlist = document.getElementById("userlist");
+        userlist.innerHTML=''
+        data.forEach(element => {
+          const list= document.createElement('li');
+          list.textContent=element.name;
+          list.style.cursor='pointer';
+          list.dataset.email=element.email;
+          userlist.appendChild(list)
+       });
+      }
+      
+     )
+      .catch((error) => console.error("Error:", error));
+  }
+  //event delegation
+  document.getElementById('userlist').addEventListener('click',(e)=>{
+   if(e.target.tagName=='LI'){
+      const originalColor=userlist.style.color;
+        e.target.style.color='red'
+        setTimeout(() => {
+              alert(`Email: ${e.target.dataset.email}`);
+              e.target.style.color=originalColor
+          }, 0);
+
+   }
+  })
+
+  fetchUserData()
+
+  
+  
+    
+  
+</script>
