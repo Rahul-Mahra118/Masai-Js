@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .light{
+            background-color: beige;
+        }
+        .dark{
+            background-color: black;
+        }
+        .blue{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body class="light">
+    
+</body>
+</html>
+<script>
+  
+  const select= document.createElement('select');
+  select.classList.add('dropdown');
+  const theme=['light','dark','blue']
+  theme.forEach(them=>{
+    const option= document.createElement('option');
+    option.innerText=them;
+    select.appendChild(option)
+  })
+  console.log(select)
+  const body= document.querySelector('body');
+  body.append(select);
+
+  function applyTheme(theme){
+    body.className=theme;
+    select.value=theme;
+  }
+  const savedTheme = sessionStorage.getItem('selectedTheme') || 'light';
+    applyTheme(savedTheme);
+  
+  select.addEventListener('change',(e)=>{
+    const seletedTheme=e.target.value;
+    sessionStorage.setItem('selectedTheme',seletedTheme);
+    applyTheme(seletedTheme)
+  })
+
+
+
+
+ 
+
+  
+</script>

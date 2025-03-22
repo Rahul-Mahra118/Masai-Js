@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <textarea name="" id="textarea" cols="50" rows="6"></textarea>
+    <button id="addbtn">Add Notes</button>
+    <button id="loadNotes">Load Notes</button>
+    <button class="dele">delete</button>
+    
+</html>
+<script>
+    const textarea= document.getElementById('textarea')
+    const addbtn= document.getElementById('addbtn');
+    const loadNotes=document.getElementById('loadNotes');
+    const clear= document.querySelector('.dele');
+    function addNotes(){
+        let value= textarea.value.trim();
+        if(value!=''){
+            let items= JSON.parse(localStorage.getItem("notes"))||[];
+           items.push(value);
+        localStorage.setItem("notes", JSON.stringify(items));
+        }
+        else{
+            alert('Please enter the value')
+        }
+        textarea.value=''
+    }
+    function displayNotes(){
+        //array of notes
+        let getdata= JSON.parse(localStorage.getItem('notes'));
+        
+        if(getdata!=[]){
+            let count=0;
+            textarea.value+='Notes Below'+'\n\n'
+            //array m loop kr rha hun  
+            //getData=['rahul','note1','note2']
+            getdata.forEach(element => {
+            //textarea.value= textarea.value+ element
+            textarea.value += `${++count}-> `+ element+"\n\n"
+          });
+        }
+
+    }
+    //to clear the data 
+    clear.addEventListener('click',()=>{
+        textarea.value='';
+        localStorage.clear();
+    })
+
+    addbtn.addEventListener('click',addNotes);
+    loadNotes.addEventListener('click',displayNotes)
+</script>
