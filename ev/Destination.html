@@ -1,0 +1,76 @@
+<!-- Properly structured content using:
+Ordered Lists for must-visit places.
+Unordered Lists for travel tips.
+Include at least 3 images showcasing key locations.
+Apply the Box Model for content spacing and alignment. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        h1{
+            text-align: center;
+            background-color: yellow;
+        }
+        .container{
+            display: flex;
+            justify-content: space-around;
+            
+            padding: 20px;
+            
+        }
+        .travelplaces li{
+           padding: 2px;
+        }
+        .traveltips li{
+            padding: 2px;
+        }
+        .image-container{
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            gap: 4px;
+        }
+        img{
+            height: 200px;
+
+        }
+
+    </style>
+</head>
+<body>
+   <h1>Destination</h1>
+
+   <div class="container">
+     <div class="travelplaces">
+        <h2>Must Visit Places</h2>
+        <ol>
+            <li>Sri Lanka</li>
+            <li>Russia</li>
+            <li>India</li>
+        </ol>
+     </div>
+    <div class="traveltips">
+        <h2>Travel Tips</h2>
+    <ul>
+        <li>Learn the Basic Language of particular location</li>
+        <li>Purchase the Travel Insurance</li>
+        <li> Plan your Expenses</li>
+    </ul>
+    </div>
+   </div>
+    <div class="image-container">
+        <img src="india.jpeg" alt="India image">
+        <img src="russia.jpg" alt="russia image">
+        <img src="sri lanka.jpeg" alt=" sri lanka image">
+    </div>
+</body>
+</html>
