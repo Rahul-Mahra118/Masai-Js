@@ -5,48 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+       #contact-main{
+         border: 1px solid black;
+       }
+       form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+       }
+    </style>
   </head>
   <body>
     <header>
       <nav>
-          <a href="/">Home</a>
-          <a href="/Destination.html">Destination</a>
-          <a href="./gallery.html">Gallery</a>
-          <a href="/contactUs.html">Contact Us</a>
-      </nav>
+        <a href="./index.html">Home</a>
+        <a href="/ev/Destination.html">Destination</a>
+        <a href="/ev/gallery.html">Gallery</a>
+        <a href="/ev/contactUs.html">Contact Us</a>
+    </nav>
   </header>
-    <h1>Contac Us</h1>
+    <main id="contact-main">
+      <h1>Contact Us</h1>
     <form action="" id="containerForm">
-      <label for="name">Name</label>
-      <input type="text" id="name" />
+      <div><label for="name">Name</label>
+        <input type="text" id="name" /></div>
       <br />
       <br />
-      <label for="">Email:</label>
-      <input type="email" id="email" />
+      <div><label for="">Email:</label>
+        <input type="email" id="email" /></div>
       <br />
       <br />
-      <label for="">Phone Number:</label>
-      <input type="tel" id="tele" />
+     <div style="margin-right: 50px;"> <label for="">Phone Number:</label>
+      <input type="tel" id="tele" /></div>
       <br />
       <br />
-      <label for="">Message</label>
-      <textarea name="" id="Message" placeholder="Enter the Mesage"></textarea>
+      <div><label for="">Message</label>
+        <textarea name="" id="Message" placeholder="Enter the Mesage"></textarea></div>
       <br />
       <br />
-      <button id="btn">Submit</button>
+      <button id="btn" style="padding: 3px; width: 90px; margin-bottom: 30px;">Submit</button>
       <h3>Feeback Section</h3>
       <div id="feedbacker"> Stored in Local Storage</div>
     </form>
+    </main>
   </body>
 </html>
 <script>
-  document.getElementById("containerForm").addEventListener("submit", () => {
-    let name = document.getElementById("name");
+  let name = document.getElementById("name");
     let email = document.getElementById("email");
     let tele = document.getElementById("tele");
     let Message = document.getElementById("message");
     let submitbtn = document.getElementById("btn");
     let feebackContainer = document.getElementById("feedbacker");
+  document.getElementById("containerForm").addEventListener("submit", () => {
+    
+   
     
     let name1 = name.value;
     let email1 = email.value;
@@ -62,4 +77,14 @@
     localStorage.setItem('feedback',feebackContainer.innerHTML)
 
   });
+
+  const button= document.getElementById('btn');
+  button.addEventListener('click',()=>{
+    let name1 = name.value;
+    let email1 = email.value;
+    let tele1 = tele.value;
+    let message= Message.value;
+    console.log(message)
+
+  })
 </script>
