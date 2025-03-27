@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="container">
-        <form action="" id="form-id" onchange="fetchData()">
+        <form action="" id="form-id" onsubmit="fetchData(event)">
             <label for="name-id">Name</label>
             <input type="text" id="name-id" required>
             <label for="email-id">Email</label>
@@ -18,16 +18,15 @@
 </body>
 </html>
 <script>
-
+    async function fetchData(event){
+        event.preventDefault();
+    const button = document.querySelector('.register');
+    button.disabled=true;   
     const name= document.querySelector('#name-id').value;
     const email= document.querySelector('#email-id').value;
     let data={
         name,email
     }
-    button.disabled=true;
-    async function fetchData(){
-    const button = document.querySelector('.register');
-    button.disabled=true;   
 
      try {
         let response= await fetch('https://formvalidation-57ef2-default-rtdb.asia-southeast1.firebasedatabase.app/forms.json',{
