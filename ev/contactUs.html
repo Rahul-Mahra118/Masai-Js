@@ -59,10 +59,11 @@
     let Message = document.getElementById("message");
     let submitbtn = document.getElementById("btn");
     let feebackContainer = document.getElementById("feedbacker");
-  document.getElementById("containerForm").addEventListener("submit", () => {
+    document.getElementById("containerForm").addEventListener("submit", (e) => {
     
    
-    
+    e.preventDefault(); //stop the page from reloading untill submit is not hit.
+
     let name1 = name.value;
     let email1 = email.value;
     let tele1 = tele.value;

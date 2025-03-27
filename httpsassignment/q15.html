@@ -1,11 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <style>
+        .product-image{
+            width: 200px;
+        }
+        .product-card{
+            border: 1px solid black;
+
+        }
+        .product-container{
+            border: 1px solid black;
+            grid-template-columns: repeat(3,1fr);   
+
+        }
+    </style>
+  </head>
+  <body>
+    <input id="input" type="text" />
+    <select name="" id="category">
+        <option value="men's clothing">men's clothing</option>
+        <option value="jewelery">jewelery</option>
+        <option value="electronics">electronics</option>
+        <option value="women's clothing">women's clothing</option>
+    </select>
+    <div class="product-container"></div>
+  </body>
 </html>
+<script>
+  //input access using dom
+  const input = document.getElementById("input");
+  const productContainer = document.querySelector(".product-container");
+  //global array to store the all the products of array
+  let products = [];
+  //function to fetch the data from api and store it to products array
+
+  async function fetchData() {
+    let response = await fetch("https://fakestoreapi.com/products");
+    products = await response.json();
+    console.log(products);
+  }
+  fetchData();
+  //on input value this function will take the input value and based on this it will filter out the product
+  function filteredBytitle() {
+    let searchquery = input.value.toLowerCase();
+    let filterBytitle = products.filter((product) => {
+      return product.title.toLowerCase().includes(searchquery);
+    });
+    displayProduct(filterBytitle);
+    input.value = "";
+  }
+  //event listner fired when any change happen on input
+  input.addEventListener("input", filteredBytitle);
+  //this will display the product based on filtered array content
+  function displayProduct(filteredArray) {
+    productContainer.innerHTML = "";
+
+    filteredArray.forEach((product) => {
+      //for every product seperate div created 
+      const card = document.createElement("div");
+      card.classList.add("product-card");
+      card.innerHTML = `<img src="${product.image}" alt="${product.title}" class="product-image" >
+        <h2 class="product-title">${product.title}</h2>
+        <h3 class="product-category">${product.category}</h3>
+        <p class="product-price">${product.price}</p>
+
+    `;
+      productContainer.appendChild(card);
+    });
+
+    async function fetchDataByCategory(){
+      let resonse = await fetch('https://fakestoreapi.com/products/categories')
+      let  category= await response.json()
+    }
+  }
+</script>
