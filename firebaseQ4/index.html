@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="displayData()">
+    <form action="" id="addingform" onsubmit="addData(event)">
+    <div class="heading">
+        <h1>Book Data</h1>
+    </div>
+      <div class="formData">
+        <!-- input fields div -->
+        <div class="input-fields">
+        <input type="text" id="id" readonly>
+          <input type="text" id="title" placeholder="Enter the Title" required />
+          <input type="text" id="author" placeholder="Enter the Author Name"  required/>
+          <input type="text" id="genre" placeholder="Enter the genre" required/>
+          <input
+            type="Number"
+            id="publishedYear"
+            placeholder="Enter the publishedYear"
+            required/>
+          <select name="" id="isAvailable">
+            <option value="true">Available</option>
+            <option value="false">Not Available</option>
+          </select>
+          <input type="submit" id="btn-id" value="Submit">
+        </div>
+        
+      </div>
+      
+    </form>
+    <!-- showing book data -->
+    <div id="table-div">
+        <table>
+            <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Genre</th>
+                  <th>Year</th>
+                  <th>Available</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="bookList"></tbody>
+        </table>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+  
+</html>
+
+<!-- 
+"id": 1,
+        "title": "Dune",
+        "author": "Frank Herbert",
+        "genre": "Science Fiction",
+        "publishedYear": 1965,
+        "available": true 
+        
+        -->
