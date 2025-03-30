@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <main>
+        <form action="" onsubmit="submitData(event)">
+            <h1>Create New Study Note</h1>
+            <input type="text" id="title" required placeholder="enter the title">
+            <textarea name="" id="textarea" placeholder="enter the description"></textarea>
+            <select name="" id="tags">
+                <option value="tag1">TagOne</option>
+                <option value="tag2">TagTwo</option>
+                <option value="tag3">TagThree</option>
+            </select>
+            <select name="" id="priority">
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>
+            <input type="file">
+            <button>Submit</button>
+
+        </form>
+    </main>
+</body>
+</html>
+<script>
+//    function fetchHeader(){
+//     fetch('header.html')
+//     .then(response=> response.text())
+//     .then(data=>{
+//         document.querySelector('#header').outerHTML=data;
+//     })
+//    }
+
+async function  submitData(event) {
+    event.preventDefault();
+
+    let data={
+        title:document.getElementById('title').value,
+        textarea:document.getElementById('textarea').value,
+        tags:document.getElementById('tags').value,
+
+
+    }
+    let response = await fetch('https://notes-project-741af-default-rtdb.asia-southeast1.firebasedatabase.app/notes.json',{
+        method:'POST',
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify(data)
+    });
+
+    localStorage.setItem('notes', JSON.stringify([data]));
+
+}
+</script>
