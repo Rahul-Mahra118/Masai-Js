@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Change Title</button>
+</body>
+</html>
+<script>
+    let isChanged= false;
+    document.querySelector('#btn').addEventListener('click',()=>{
+        if(!isChanged){
+            document.getElementsByTagName('title')[0].innerText='Rahul the boss'
+
+        }
+        else{
+            document.getElementsByTagName('title')[0].innerText='Main Title'
+
+        }
+         isChanged=!isChanged;
+    })
+    
+</script>

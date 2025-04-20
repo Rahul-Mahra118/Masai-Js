@@ -23,9 +23,11 @@ document.addEventListener('DOMContentLoaded',async()=>{
             characterCard.classList.add('character-card');
             characterCard.innerHTML=
             `  <img src="${character.image}" alt="character-img">
+              <div>
                <h2>Name: ${character.name}</h2>
                <p>Species: ${character.species} </p>
-               <p>Status: ${character.status}</p>
+               <p>Status: ${character.status}</p> 
+               </div>
             `
             Container.appendChild(characterCard);
         })

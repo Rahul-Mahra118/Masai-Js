@@ -12,7 +12,7 @@
             <h1>Create New Study Note</h1>
             <input type="text" id="title" required placeholder="enter the title">
             <textarea name="" id="textarea" placeholder="enter the description"></textarea>
-            <select name="" id="tags">
+            <select name="" id="tags"  multiple>
                 <option value="tag1">TagOne</option>
                 <option value="tag2">TagTwo</option>
                 <option value="tag3">TagThree</option>
@@ -37,7 +37,7 @@
 //         document.querySelector('#header').outerHTML=data;
 //     })
 //    }
-
+let arr=[]
 async function  submitData(event) {
     event.preventDefault();
 
@@ -56,7 +56,11 @@ async function  submitData(event) {
         body:JSON.stringify(data)
     });
 
-    localStorage.setItem('notes', JSON.stringify([data]));
-
+    
+    arr.push(data)
+    console.log(arr)
+    localStorage.setItem('notes', JSON.stringify(arr));
 }
+
+
 </script>
