@@ -7,14 +7,13 @@ import { MovieProvider } from "./context/MovieContext.jsx";
 
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
+ 
    
     <FirebaseProvider>
       <MovieProvider>
-     
         <App />
       </MovieProvider>
     </FirebaseProvider>
    
-  </StrictMode>
+
 );

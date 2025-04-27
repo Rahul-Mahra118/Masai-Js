@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router"
 
 const Navbar = () => {
     console.log('navi bar')
@@ -7,7 +7,7 @@ const Navbar = () => {
     <ul style={{backgroundColor:'red'}}>
       <li>
         <NavLink to='/'>Add Data</NavLink>
-      </li>
+      </li>   
       <li>
         <NavLink to='/movies'>Display Movies</NavLink>
       </li>

@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router";
 import Display from "../components/Display.jsx";
 import AddData from '../components/AddData.jsx'
 import Update from "../components/Update.jsx";
