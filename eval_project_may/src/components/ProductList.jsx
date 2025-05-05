@@ -50,8 +50,9 @@ export const ProductList = () => {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(250px,1fr)",
+          gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
           gap: "20px",
+          padding:'30px'
         }}
       >
         {products &&
