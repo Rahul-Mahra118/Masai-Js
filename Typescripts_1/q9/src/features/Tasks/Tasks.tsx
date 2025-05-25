@@ -27,6 +27,7 @@ const handleSubmit=(e:ChangeEvent<HTMLFormElement>)=>{
           type="text"
           placeholder="enter description"
           id="description"
+          
           value={formState.description}
           onChange={handleChange}
           required
