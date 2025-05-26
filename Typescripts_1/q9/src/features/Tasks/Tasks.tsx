@@ -1,24 +1,34 @@
-import { useState, type ChangeEvent } from "react";
+import { useState, type ChangeEvent, type FormEvent } from "react";
 import { addOrUpdateTask, type PayloadType } from "./taskSlice";
 import { useAppDisPatch } from "../../hooks/hooks";
 
 const initialState: PayloadType = {
   id: Date.now(),
   description: "",
-  priority: "low",
+  priority: "",
   completed: false,
 };
 const Tasks: React.FC = () => {
-  const [formState, setFormState] = useState<PayloadType>(initialState);
-  const dispatch= useAppDisPatch();
-  const handleChange=(e:ChangeEvent<HTMLInputElement|HTMLSelectElement>)=>{
-    setFormState({...formState, description:e.target.value })
+  const [formState, setFormState] = useState(initialState);
+  const dispatch = useAppDisPatch();
 
-  }
-const handleSubmit=(e:ChangeEvent<HTMLFormElement>)=>{
-    e.preventDefault()
-    dispatch(addOrUpdateTask(formState))
-}
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    if (name === "completed") {
+      setFormState({ ...formState, completed: !formState.completed });
+      return;
+    }
+
+    setFormState({ ...formState, [name]: value });
+     console.log(formState)
+  };
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    dispatch(addOrUpdateTask(formState));
+     setFormState({...initialState, id:Date.now()})
+  };
   return (
     <>
       <form action="" onSubmit={handleSubmit}>
@@ -27,19 +37,32 @@ const handleSubmit=(e:ChangeEvent<HTMLFormElement>)=>{
           type="text"
           placeholder="enter description"
           id="description"
-          
           value={formState.description}
           onChange={handleChange}
           required
+          name="description"
         />
 
-        <select name="Priority_dropdown" id="priority_id" onChange={handleChange}>
-            <option value="">Choose Priority</option>
-            <option value="low">Low</option>
-            <option value="medium">medium</option>
-            <option value="high">high</option>
+        <select
+          name="priority"
+          id="priority_id"
+          onChange={handleChange}
+          value={formState.priority}
+        >
+          <option value="">Choose Priority</option>
+          <option value="low">Low</option>
+          <option value="medium">medium</option>
+          <option value="high">high</option>
         </select>
-        <input type="submit" value='Submit' />
+        <label htmlFor="completed">Completed</label>
+        <input
+          type="checkbox"
+          value={formState.completed ? "true" : "false"}
+          checked={formState.completed}
+          name="completed"
+          onChange={handleChange}
+        />
+        <input type="submit" value="Submit" />
       </form>
     </>
   );
