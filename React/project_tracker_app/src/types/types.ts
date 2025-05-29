@@ -17,3 +17,19 @@ export interface AuthContextType{
 export interface DatabaseType{
     
 }
+
+export interface formType extends credType{
+    fullName:string
+}
+
+export interface UserDetails{
+    uid:string,
+    email:string,
+    fullName:string
+    isSignUp?:boolean
+}
+
+export interface ProjectDetails{
+    title:string,
+    description:string,
+}
