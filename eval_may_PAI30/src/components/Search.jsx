@@ -4,21 +4,48 @@ import { useNavigate } from "react-router";
 export const Search = () => {
   const [date, setDate] = useState("");
   let ref = useRef(null);
-  const navigate= useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
-    ref.current?.focus()
+    ref.current?.focus();
   }, []);
 
-  const handleSearch=(e)=>{
+  const handleSearch = (e) => {
     e.preventDefault();
-    navigate(`/intensity/${date}`)
+    navigate(`/intensity/${date}`);
+  };
 
-  }
   return (
-    <>
-      <input type="date" ref={ref} value={date} required  onChange={(e)=>setDate(e.target.value)}/>
-      <button onClick={handleSearch}>Search</button>
-    </>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginTop: "50px" }}>
+      <input
+        type="date"
+        ref={ref}
+        value={date}
+        required
+        onChange={(e) => setDate(e.target.value)}
+        style={{
+          padding: "10px",
+          fontSize: "16px",
+          borderRadius: "4px",
+          border: "1px solid #ccc",
+          marginBottom: "10px",
+          width: "200px",
+        }}
+      />
+      <button
+        onClick={handleSearch}
+        style={{
+          padding: "10px 20px",
+          fontSize: "16px",
+          backgroundColor: "#007bff",
+          color: "#fff",
+          border: "none",
+          borderRadius: "4px",
+          cursor: "pointer",
+        }}
+      >
+        Search
+      </button>
+    </div>
   );
 };
