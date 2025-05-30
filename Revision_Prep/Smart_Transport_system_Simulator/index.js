@@ -119,3 +119,37 @@ taxi.logTrip({
   fare: taxi.calcFare(),
   loadPct:taxi.loadPct ,
 });
+
+//.........................................
+
+const HIGH_THRESHOLD   = 0.80   // ≥ 80 % of capacity
+const MEDIUM_THRESHOLD = 0.40   // 40–79 %
+// const LOW  = below  40 %
+
+
+
+function buildAnalytics(arr){
+ 
+let obj={}
+
+    const totalTrips=arr.length;
+    const totalRevenue= arr.reduce((acc,curr)=>{
+     acc=acc+ curr.fare;
+    return acc;
+    },0);
+    const totalDistance= arr.reduce((acc,curr)=>{
+        acc=acc+curr.distance;
+        return acc;
+    },0)
+
+    const averageFarePerKm=parseFloat(totalRevenue/totalDistance).toFixed(2);
+
+  obj.totalTrips=totalTrips;
+  obj.totalRevenue=totalRevenue;
+  obj.totalDistance=totalDistance;
+  obj.averageFarePerKm=averageFarePerKm
+  return obj;
+
+}
+
+
