@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="signUp">
+      <label for="name">FullName</label>
+      <input type="text" name="name" id="name" required />
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required />
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" />
+
+      <select name="role" id="roleId">
+        <option value="">choose Value</option>
+        <option value="admin">Amin</option>
+        <option value="regular">Regular</option>
+      </select>
+      <button id="buttonId">Sign Up</button>
+    </div>
+    <div>
+      <p>Already have an account ?? </p>
+      <a href="#" onclick="changeForm()" >Switch to Sign In </a>
+    </div>
+
+    <script src="auth.js"></script>
+  </body>
+</html>

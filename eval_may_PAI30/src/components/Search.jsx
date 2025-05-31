@@ -16,7 +16,15 @@ export const Search = () => {
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginTop: "50px" }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        marginTop: "50px",
+      }}
+    >
+      <h1>CarbonTrack – UK Electricity Intensity Viewer</h1>
       <input
         type="date"
         ref={ref}
