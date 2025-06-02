@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Globax Mart</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div
+      style="
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+      "
+    >
+    <h1 style="margin-bottom: 10px;">Validate Your Identity</h1>
+      <form action="" class="formDiv" id="formId">
+        <div style="display: flex;  padding: 10px;gap: 40px; width: 100%;">
+          <label for="fullName">FullName</label>
+          <input type="text" name="fullName" id="fullName" required />
+        </div>
+        <div style="display: flex;  padding: 10px;gap: 60px; width: 100%;">
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+        </div>
+
+        <div style="display: flex;  padding: 10px;gap: 40px; width: 100%;">
+          <label for="password">Password</label>
+          <input type="password" id="password1" />
+         
+        </div>
+         <input type="submit" value="Sign Up" style="border: none; padding: 6px; border-radius: 8px; background-color: rgba(6, 6, 255, 0.644);color: white; width: 100%;"/>
+      </form>
+      <p>Already have an Account? <a href="#">
+        Switch to sign in
+      </a></p>
+    </div>
+    <script src="validation.js"></script>
+  </body>
+</html>

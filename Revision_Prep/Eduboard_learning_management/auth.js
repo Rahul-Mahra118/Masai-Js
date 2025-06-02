@@ -1,5 +1,5 @@
 const button = document.querySelector("#buttonId");
-console.log(button);
+
 const users = JSON.parse(localStorage.getItem("userInfo")) || [];
 let isSignUp = true;
 
@@ -13,37 +13,34 @@ function changeForm() {
 }
 
 button.addEventListener("click", () => {
-  try {
-    if (isSignUp) {
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const role = document.getElementById("roleId").value;
-      console.log(role);
-      //   console.log(name,email)
-      const userdetails = { name, email, role };
-      console.log(userdetails);
-      let existingUser = JSON.parse(localStorage.getItem(users));
-      let response = existingUser.findIndex((user) => user.email === email);
-      if (response == -1) {
-        users.push(userdetails);
+  if (isSignUp) {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const role = document.getElementById("roleId").value;
+    console.log(role);
+    //   console.log(name,email)
+    const userdetails = { name, email, role };
+    console.log(userdetails);
 
-        localStorage.setItem("userInfo", JSON.stringify(users));
-      }
+    let response = users?.findIndex((user) => user.email === email);
+    if (response == -1) {
+      users.push(userdetails);
+
+      localStorage.setItem("userInfo", JSON.stringify(users));
     } else {
-      const email = document.getElementById("email").value;
-      const storedEmail = localStorage.getItem(users);
-      let res = storedEmail.find((user) => user.email === email);
-      if (res) {
-        setTimeout(() => {
-          window.location.href = "/";
-        }, 1000);
-      }
+      console.log("user already exist.");
     }
-  } catch (error) {
-    throw new Error("error");
-  } finally {
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("roleId").value = "";
+  } else {
+    const email = document.getElementById("email").value;
+
+    let res = users.find((user) => user.email === email);
+    if (res) {
+      localStorage.setItem('isActive',res.email)
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 1000);
+    } else {
+      alert("Sign up first");
+    }
   }
 });
